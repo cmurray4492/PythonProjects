@@ -5,3 +5,9 @@ while True:
         choice = input("Do you want to enter more names? (y/n) ")
         if choice == 'n':
             break
+
+with open("names.txt", 'r') as file:
+    lines = file.readlines()
+
+for line in lines:
+    print(line.strip().capitalize())
