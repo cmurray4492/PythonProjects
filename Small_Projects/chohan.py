@@ -16,24 +16,24 @@ print('''Cho-Ha, by Al Al Sweigart, al@inventwithpython.com
       total to an odd (han) or even (cho)  number.
 
       ''')
-global purse = 50019
+purse = 50019.
 
-def main():
+while True:
 
     # Place your bet
     print(f"You have, {purse}. How much would you like to bet? (or QUIT)")
     while True:
         pot = input('> ')
-        if pot.upper == "QUIT":
-            print("Thanks for pplaying")
+        if pot.upper() == "QUIT":
+            print("Thanks for playing")
             sys.exit()
         elif not pot.isdecimal():
             print('Please enter a number: ')
-        elif int(pot) > purse:
+        elif float(pot) > purse:
             print("You do not have enough money to make that bet!")
         else:
             # This is a valid bet
-            pot = int(pot)  # convert pot to integer
+            pot = float(pot)
             break  # Leave loop once bet is placed
 
     # Roll the dice
@@ -89,7 +89,3 @@ def main():
         print("You have run out of money!")
         print('Thanks for playing')
         sys.exit()
-
-    main()
-
-main()
