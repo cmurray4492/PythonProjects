@@ -9,7 +9,7 @@ select
 
 
 from 
-	customer_details
+	grocery_db.customer_details
 
 
 -- ORDER BY
@@ -25,7 +25,7 @@ select
 	* 
 
 from 
-	customer_details;
+	grocery_db.customer_details;
 
 
 -- DISTINCT 
@@ -36,7 +36,7 @@ select
 	
 
 from 
-	customer_details;
+	grocery_db.customer_details;
 	
 	
 
@@ -49,7 +49,7 @@ select
 	customer_id as customer_number
 
 from 
-	customer_details;
+	grocery_db.customer_details;
 
 
 	
@@ -62,5 +62,5 @@ select
 	distance_from_store * 1.6 distance_from_store_km
 
 from 
-	customer_details;
+	grocery_db.customer_details;
 
