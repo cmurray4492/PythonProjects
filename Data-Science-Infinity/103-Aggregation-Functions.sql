@@ -16,6 +16,7 @@ from
 	
 -- The Group By Statement
 select 
+	product_area_id,
 	transaction_date,
 	sum(sales_cost) as total_sales,
 	sum(num_items) as total_items,
@@ -24,16 +25,25 @@ from
 	grocery_db.transactions
 
 group by 
+	product_area_id,
 	transaction_date
 	
 order by 
+	product_area_id,
 	transaction_date;
-
--- Grouping By Multiple Variaqbles 
-
-
 
 
 -- The Having Clause 
+select 
+	product_area_id,
+	sum(sales_cost) as total_sales
+	
+from
+	grocery_db.transactions
 
+group by 
+	product_area_id
+
+having
+	sum(sales_cost) > 200000;
 
