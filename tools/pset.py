@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-from mr_clean import pseudo4sigmafilter
+from mr_clean import outlierIQRCapping
 
 testdf = pd.DataFrame(np.random.randn(5250, 3), columns=list("ABC"))
 testdf.insert(len(testdf.columns), "category", "Category A")
@@ -16,6 +16,7 @@ testdf.insert(
 )
 
 testdf.at[0, "A"] = 11
+testdf.at[4, "A"] = 19
 print(testdf)
-pseudo4sigmafilter(testdf, "A")
+outlierIQRCapping(testdf, "A")
 print(testdf)
