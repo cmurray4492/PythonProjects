@@ -31,7 +31,6 @@ build/
 develop-eggs/
 dist/
 downloads/
-databases/
 eggs/
 .eggs/
 lib/
@@ -162,5 +161,9 @@ pip-selfcheck.json
 *.mp3
 *.mp4
 *.jpg
+
+# Data files
+Data/ 
+MNIST/
 
 # End of https://www.toptal.com/developers/gitignore/api/venv,django
